@@ -6,7 +6,7 @@
 This is a small Android application that allows you to view the alchemy ingredient or effects of the video game [The Elder Scrolls V: Skyrim](https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/).
 This app's primary goal was to be able to check alchemy data without 'alt-tabbing' all the time.
 ## Installation
-1. Go to the release section.
+1. Go to the [Releases](https://github.com/sushkasheadgames/skyrimalchemyhelperdoc/releases) section.
 2. Download the latest version.
 3. Copy to your Android device.
 4. Install
