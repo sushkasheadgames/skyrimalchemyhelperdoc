@@ -53,6 +53,7 @@ This section allows users to add effects and sort all possible potions based on 
 ### Settings section
 
 ![Settings Screen](./screenshots/settings_screen.png)
+
 In this section you can exclude certain types of ingredients from the ingredient list by toggling off the category.
 You can change the language of ingredient and effect names. Supported languages:
 - English
