@@ -65,3 +65,5 @@ You can change the language of ingredient and effect names. Supported languages:
 - Spanish
 - Chinese
 - Japanese
+
+<meta name="google-site-verification" content="Ui4KgsIsdXcHZaXQSj5dRv3Ti1aZ8Kz7RAk9GA3s5Nk" />
