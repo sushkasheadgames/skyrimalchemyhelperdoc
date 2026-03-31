@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Ui4KgsIsdXcHZaXQSj5dRv3Ti1aZ8Kz7RAk9GA3s5Nk" />
+    <title>Skyrim Alchemy Helper App Documentation</title>
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #111111;
+            --code-bg: #f4f4f4;
+            --border: #dddddd;
+        }
+
+        [data-theme="dark"] {
+            --bg: #121212;
+            --text: #e5e5e5;
+            --code-bg: #1e1e1e;
+            --border: #333333;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            margin-top: 20px;
+        }
+
+        pre {
+            background: var(--code-bg);
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        button {
+            padding: 6px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="skyrim-alchemy-helper-app-documentation">Skyrim Alchemy Helper App Documentation</h1>
+    </header>
+
+    <main>
+
+
+
+        <h2 id="desciption">Desciption</h2>
+        <p><img src="./screenshots/welcome_screen.png" alt="Welcome Screen"></p>
+        <p>This is a small Android application that allows you to view the alchemy ingredient or effects of the video
+            game <a href="https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/">The
+                Elder Scrolls V: Skyrim</a>.
+            This app&#39;s primary goal was to be able to check alchemy data without &#39;alt-tabbing&#39; all the time.
+        </p>
+        <h2 id="installation">Installation</h2>
+        <ol>
+            <li>Go to the <a href="https://github.com/sushkasheadgames/skyrimalchemyhelperdoc/releases">Releases</a>
+                section.</li>
+            <li>Download the latest version.</li>
+            <li>Copy to your Android device.</li>
+            <li>Install</li>
+        </ol>
+        <h2 id="usage">Usage</h2>
+        <h3 id="ingredients-section">Ingredients section</h3>
+        <p float="left" align="middle">
+            <img src="./screenshots/ingredients_screen_0.png" width="324" />
+            <img src="./screenshots/ingredients_screen_1.png" width="324" />
+        </p>
+
+        <p>This section contains data on alchemy ingredients. You can filter ingredients by name using the search
+            button.
+            If you click on an ingredient, you can see possible potion candidates; you can sort these candidates by
+            price, mix candidate name, and effect name. The price calculation may be inaccurate depending on your
+            character&#39;s level. The price is calculated assuming your character has no perks or levels in the Alchemy
+            skill.</p>
+        <h3 id="effects-section">Effects section</h3>
+        <p float="left" align="middle">
+            <img src="./screenshots/effects_screen_0.png" width="324" />
+            <img src="./screenshots/effects_screen_1.png" width="324" />
+        </p>
+
+        <p>This section contains data on alchemy effects. You can filter effects by name using the search button.
+            If you click on effect, you can see a list of ingredients with that effect. This list may be filtered by
+            name using the search button.</p>
+        <h3 id="helper-section">Helper section</h3>
+        <p float="left" align="middle">
+            <img src="./screenshots/helper_screen_0.png" width="324" />
+            <img src="./screenshots/helper_screen_1.png" width="324" />
+            <img src="./screenshots/helper_screen_2.png" width="324" />
+        </p>
+
+        <p>This section allows users to add effects and sort all possible potions based on price. Please note the price
+            is calculated assuming your character has no perks or levels in the Alchemy skill. So sorting order may be
+            different than in actual game.</p>
+        <h4 id="adding-ingredients">Adding ingredients</h4>
+        <ol>
+            <li>Click on the &#39;Add&#39; button.</li>
+            <li>Click on the desired ingredient name once to add one instance of that ingredient. Long tap to manually
+                input the quantity of the ingredient.</li>
+            <li>Click on &#39;Add&#39;.</li>
+        </ol>
+        <h4 id="launching-calculation">Launching calculation</h4>
+        <ol>
+            <li>Click on the &#39;Calculate&#39; button.</li>
+            <li>Wait until the calculation is finished. Please note calculation may take some time.<h3
+                    id="settings-section">Settings section</h3>
+            </li>
+        </ol>
+        <p><img src="./screenshots/settings_screen.png" alt="Settings Screen"></p>
+        <p>In this section you can exclude certain types of ingredients from the ingredient list by toggling off the
+            category.
+            You can change the language of ingredient and effect names. Supported languages:</p>
+        <ul>
+            <li>English</li>
+            <li>French</li>
+            <li>German</li>
+            <li>Italian</li>
+            <li>Polish</li>
+            <li>Russian</li>
+            <li>Spanish</li>
+            <li>Chinese</li>
+            <li>Japanese</li>
+        </ul>
+
+
+    </main>
+
+    <script>
+        const root = document.documentElement;
+
+        // Apply saved theme or system preference
+        function applyTheme() {
+            const saved = localStorage.getItem("theme");
+
+            if (saved) {
+                root.setAttribute("data-theme", saved);
+            } else {
+                const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                root.setAttribute("data-theme", systemDark ? "dark" : "light");
+            }
+        }
+
+        // Toggle theme manually
+        function toggleTheme() {
+            const current = root.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+
+            root.setAttribute("data-theme", next);
+            localStorage.setItem("theme", next);
+        }
+
+        // Listen for system changes (only if user hasn't overridden)
+        window.matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", e => {
+                if (!localStorage.getItem("theme")) {
+                    root.setAttribute("data-theme", e.matches ? "dark" : "light");
+                }
+            });
+
+        applyTheme();
+    </script>
+
+</body>
+
+</html>
